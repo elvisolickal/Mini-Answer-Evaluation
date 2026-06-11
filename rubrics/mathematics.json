@@ -1,0 +1,13 @@
+{
+  "subject": "Mathematics",
+  "class": "12",
+  "max_marks": 5,
+  "criteria": [
+    "Clear step-by-step solution",
+    "Correct method applied",
+    "Accurate calculations",
+    "Final answer presented",
+    "Logical reasoning"
+  ],
+  "keywords": ["integral", "derivative", "limit", "series", "matrix", "proof", "solve"]
+}

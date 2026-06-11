@@ -1,0 +1,13 @@
+{
+  "subject": "Physics",
+  "class": "12",
+  "max_marks": 5,
+  "criteria": [
+    "Correct definitions",
+    "Relevant formulas",
+    "Numerical accuracy",
+    "Conceptual explanation",
+    "Units and significant figures"
+  ],
+  "keywords": ["force", "energy", "motion", "velocity", "acceleration", "Newton", "F=ma"]
+}

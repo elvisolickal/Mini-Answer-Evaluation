@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini Answer Evaluator – evaluate student answers using AI-powered rubric matching."/>
+  <title>Mini Answer Evaluator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon">✦</span>
+      <span class="logo-text">EvalAI</span>
+    </div>
+    <p class="tagline">AI-powered answer evaluation with rubric matching</p>
+  </header>
+
+  <main class="container">
+    <!-- Input card -->
+    <section class="card" id="input-card">
+      <h1 class="card-title">Evaluate an Answer</h1>
+
+      <div class="field">
+        <label for="question-input" class="field-label">Question</label>
+        <textarea
+          id="question-input"
+          class="field-textarea"
+          rows="3"
+          placeholder="e.g. What is Newton's second law of motion?"
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label for="answer-input" class="field-label">Student Answer</label>
+        <textarea
+          id="answer-input"
+          class="field-textarea"
+          rows="5"
+          placeholder="e.g. Newton's second law states that F = ma, where F is the net force..."
+        ></textarea>
+      </div>
+
+      <button id="evaluate-btn" class="btn-evaluate" onclick="runEvaluation()">
+        <span id="btn-text">Evaluate</span>
+        <span id="btn-spinner" class="spinner hidden"></span>
+      </button>
+    </section>
+
+    <!-- Results -->
+    <section id="results-section" class="hidden">
+      <!-- Rubric card -->
+      <div class="card" id="rubric-card">
+        <h2 class="card-title">
+          <span class="badge" id="rubric-badge">—</span>
+          Retrieved Rubric
+        </h2>
+        <ul id="rubric-criteria" class="criteria-list"></ul>
+        <p class="max-marks-label">Max marks: <strong id="rubric-max-marks">—</strong></p>
+      </div>
+
+      <!-- Evaluation card -->
+      <div class="card" id="eval-card">
+        <h2 class="card-title">Evaluation Result</h2>
+
+        <div class="score-row">
+          <div class="score-circle">
+            <span id="score-awarded">—</span>
+            <span class="score-slash">/</span>
+            <span id="score-max">—</span>
+          </div>
+          <div class="score-bar-wrap">
+            <div class="score-bar-track">
+              <div class="score-bar-fill" id="score-bar"></div>
+            </div>
+            <span class="score-pct" id="score-pct">—%</span>
+          </div>
+        </div>
+
+        <div class="result-block">
+          <h3 class="result-label">Feedback</h3>
+          <p id="result-feedback" class="result-text">—</p>
+        </div>
+
+        <div class="result-block">
+          <h3 class="result-label">Justification</h3>
+          <p id="result-justification" class="result-text">—</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Error message -->
+    <div id="error-box" class="error-box hidden">
+      <span id="error-text"></span>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

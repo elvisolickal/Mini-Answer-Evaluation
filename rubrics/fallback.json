@@ -1,0 +1,10 @@
+{
+  "max_marks": 5,
+  "criteria": [
+    "Relevance to the question",
+    "Coverage of key points",
+    "Clarity of explanation",
+    "Logical structure",
+    "Language quality"
+  ]
+}

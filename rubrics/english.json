@@ -1,0 +1,13 @@
+{
+  "subject": "English",
+  "class": "10",
+  "max_marks": 5,
+  "criteria": [
+    "Explanation of key points",
+    "Coherent structure",
+    "Appropriate language",
+    "Clarity of expression",
+    "Grammar and spelling"
+  ],
+  "keywords": ["essay", "poem", "summary", "character", "theme", "analysis"]
+}
